@@ -5,7 +5,7 @@ import { useState } from 'react';
 import React from 'react';
 
 function App(){
-  
+
   const [reservations, setReservations] = useState([])
    
   function addRes (newRes) {
@@ -13,7 +13,6 @@ function App(){
   }
   
   function deleteRes(id){
-    console.log(id);
     const badRes = reservations.filter(res => res.id !== id)
     setReservations(badRes)
   }

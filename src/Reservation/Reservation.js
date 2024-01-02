@@ -2,8 +2,7 @@ import Card from '../Card/Card.js';
 import './Reservation.css';
 
 
-function Reservation({reservations}){
-console.log(reservations)
+function Reservation({ reservations, deleteRes }){
 
 const ResCards = reservations.map(res => {
    return (
@@ -14,6 +13,7 @@ const ResCards = reservations.map(res => {
         number={'Number of guests: ' + res.number} 
         id={res.id}
         key={res.id}
+        deleteRes={deleteRes}
   />
    )
 })
