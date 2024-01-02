@@ -6,7 +6,7 @@ function Form(addRes){
  const [name, setName] = useState("");
  const [date, setDate] = useState("");
  const [time, setTime] = useState("");
- const [guests, setGuests] = useState("");
+ const [number, setNumber] = useState("");
 
 
  function submitNewRes(event) {
@@ -16,7 +16,7 @@ function Form(addRes){
        name,
        date,
        time,
-       guests
+       number
    }
    addRes(newRes)
    emptyInput()
@@ -26,6 +26,8 @@ function Form(addRes){
  function emptyInput(){
    setName("")
    setDate("")
+   setTime("")
+   setNumber("")
  }
  return (
    <form>
@@ -54,8 +56,8 @@ function Form(addRes){
        type="text"
        placeholder="Number of Guests"
        name="guests"
-       value={guests}
-       onClick={event => setGuests(event.target.value)}
+       value={number}
+       onClick={event => setNumber(event.target.value)}
        />
 
 

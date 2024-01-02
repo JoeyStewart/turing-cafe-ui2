@@ -2,9 +2,9 @@ form {
     margin: auto;
   }
 
-  input, button {
+input, button {
     margin: 5px;
     width: 30%;
-    border: 2px solid black;
-    font-size: 18px;
-  }
+    border: 2px solid teal;
+    font-size: 15px;
+}
