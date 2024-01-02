@@ -8,7 +8,7 @@ const ResCards = reservations.map(res => {
    return (
         <Card
         name={res.name}
-        description={res.date}
+        date={res.date}
         time={res.time}
         number={'Number of guests: ' + res.number} 
         id={res.id}
