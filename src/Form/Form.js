@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Form.css';
 
 
-function Form(addRes){
+function Form({addRes}){
  const [name, setName] = useState("");
  const [date, setDate] = useState("");
  const [time, setTime] = useState("");
@@ -31,37 +31,35 @@ function Form(addRes){
  }
  return (
    <form>
-       <input
-       type="text"
-       placeholder="someShit"
-       name="name"
-       value={name}
-       onClick={event => setName(event.target.value)}
-       />
-       <input
-       type="text"
-       placeholder="Date of Reservation"
-       name="date"
-       value={date}
-       onClick={event => setDate(event.target.value)}
-       />
         <input
-       type="text"
-       placeholder="Time of Reservation"
-       name="time"
-       value={time}
-       onClick={event => setTime(event.target.value)}
-       />
-       <input
-       type="text"
-       placeholder="Number of Guests"
-       name="guests"
-       value={number}
-       onClick={event => setNumber(event.target.value)}
-       />
-
-
-       <button onClick = { event => submitNewRes(event)}>Make Reservation</button>
+        type="text"
+        placeholder="Name"
+        name="name"
+        value={name}
+        onChange={event => setName(event.target.value)}
+        />
+        <input
+        type="text"
+        placeholder="Date of Reservation"
+        name="date"
+        value={date}
+        onChange={event => setDate(event.target.value)}
+        />
+        <input
+        type="text"
+        placeholder="Time of Reservation"
+        name="time"
+        value={time}
+        onChange={event => setTime(event.target.value)}
+        />
+        <input
+        type="text"
+        placeholder="Number of Guests"
+        name="guests"
+        value={number}
+        onChange={event => setNumber(event.target.value)}
+        />
+        <button onClick={ event => submitNewRes(event)}>Make Reservation</button>
    </form>
  )
 }
