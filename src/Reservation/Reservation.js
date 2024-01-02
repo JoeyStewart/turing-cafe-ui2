@@ -3,7 +3,7 @@ import './Reservation.css';
 
 
 function Reservation({reservations}){
-
+console.log(reservations)
 
 const ResCards = reservations.map(res => {
    return (
