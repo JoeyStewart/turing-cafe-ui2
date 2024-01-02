@@ -11,7 +11,7 @@ const ResCards = reservations.map(res => {
         name={res.name}
         description={res.date}
         time={res.time}
-        guests={'Number of guests: ' + res.number} 
+        number={'Number of guests: ' + res.number} 
         id={res.id}
         key={res.id}
   />
